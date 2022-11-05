@@ -1,4 +1,4 @@
-package util;
+package datacrating;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
@@ -10,7 +10,6 @@ public class DateInput {
     static LocalDate dateOfReturn;
 
     public static LocalDate userDateCreator() {
-        System.out.println("Enter the date of completion");
         while (true) {
             System.out.print("Enter year. ");
             year = UserChoiceInput.getUserChoiceInput();
@@ -20,12 +19,9 @@ public class DateInput {
             day = UserChoiceInput.getUserChoiceInput();
             try {
                 dateOfReturn = LocalDate.of(year, month, day);
-                LocalDate localDateToday = LocalDate.now();
-                if (dateOfReturn.isAfter(localDateToday)) {
-                    return dateOfReturn;
-                }else {
-                    System.out.println("Invalid input. Your data is before current date.");
-                }
+                return dateOfReturn;
+
+
             } catch (DateTimeException e) {
                 System.out.println("Invalid input.");
             }

@@ -1,10 +1,13 @@
 package bookmodel;
 
+import java.util.List;
+
 public class Book extends PrintedProduct {
 
     private String bookAuthor;
     private int yearOfWriting;
     private String bookGenre;
+    private List<HistoryToken> bookHistory;
 
     public Book() {
     }
@@ -31,6 +34,18 @@ public class Book extends PrintedProduct {
 
     public void setBookGenre(String bookGenre) {
         this.bookGenre = bookGenre;
+    }
+
+    public List<HistoryToken> getBookHistory() {
+        return bookHistory;
+    }
+
+    public void setBookHistory(List<HistoryToken> bookHistory) {
+        this.bookHistory = bookHistory;
+    }
+
+    public void addBookHistoryToken(HistoryToken historyToken) {
+        bookHistory.add(historyToken);
     }
 
     @Override

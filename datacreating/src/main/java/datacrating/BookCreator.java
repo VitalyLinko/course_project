@@ -1,8 +1,8 @@
-package util;
+package datacrating;
 
 import bookmodel.Book;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BookCreator {
@@ -15,8 +15,7 @@ public class BookCreator {
         book.setBookAuthor(getBookAuthor());
         book.setBookGenre(getBookGenre());
         book.setYearOfWriting(getBookYearOfWriting());
-        book.setProductReturnDate(getBookReturnDate());
-        book.setAvailableStatus(getBookAvailableStatus());
+        book.setBookHistory(new ArrayList<>());
         return book;
     }
 
@@ -39,18 +38,4 @@ public class BookCreator {
         System.out.print("Enter book year of writing: ");
         return Integer.parseInt(SCANNER.nextLine());
     }
-
-
-    private static LocalDate getBookReturnDate() {
-        return DateInput.userDateCreator();
-    }
-
-    private static boolean getBookAvailableStatus() {
-        System.out.print("Is book taken:\n1-Yes\n2-No\n");
-        if (Integer.parseInt(SCANNER.nextLine())==1){
-            return true;
-        }
-        return false;
-    }
-
 }

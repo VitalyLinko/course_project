@@ -1,6 +1,5 @@
-package util;
+package datacrating;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserChoiceInput {

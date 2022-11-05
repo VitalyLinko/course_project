@@ -1,4 +1,4 @@
-package util;
+package datacrating;
 
 import usermodel.RegularUser;
 
@@ -9,7 +9,6 @@ public class UserCreator {
 
     public static RegularUser userCreator() {
         RegularUser user = new RegularUser();
-//        SCANNER.nextLine();
         user.setFirstName(getUserFirstName());
         user.setLastName(getUserLastName());
         user.setAge(getUserAge());

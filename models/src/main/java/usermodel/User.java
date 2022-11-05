@@ -4,12 +4,11 @@ import bookmodel.PrintedProduct;
 
 import java.util.List;
 
-public abstract class User{
+public abstract class User {
 
     private String firstName;
     private String lastName;
     private int age;
-    private List<PrintedProduct> listOfProducts;
 
     public User() {
     }
@@ -38,13 +37,6 @@ public abstract class User{
         this.age = age;
     }
 
-    public List<PrintedProduct> getListOfProducts() {
-        return listOfProducts;
-    }
-
-    public void setListOfProducts(List<PrintedProduct> listOfProducts) {
-        this.listOfProducts = listOfProducts;
-    }
 
     @Override
     public String toString() {

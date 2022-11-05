@@ -1,4 +1,6 @@
-package util;
+package menuutil;
+
+import datacrating.UserChoiceInput;
 
 import java.util.Scanner;
 
@@ -9,10 +11,10 @@ public class Menu {
     public static void printMenu() {
         MenuOption[] menuOptions = MenuOption.values();
         for (MenuOption option : menuOptions) {
-            if (option.equals(MenuOption.valueOf("DEFAULT"))){
+            if (option.equals(MenuOption.valueOf("DEFAULT"))) {
                 continue;
             }
-                System.out.println(option);
+            System.out.println(option);
         }
     }
 
